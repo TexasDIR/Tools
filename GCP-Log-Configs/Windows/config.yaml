@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# 
-receivers:
-  windows_event_log:
-    type: windows_event_log
-    channels: [System,Application,Security]
-    render_as_xml: true
-    receiver_version: 2
+logging:
+  receivers:
+    windows_event_log:
+      type: windows_event_log
+      channels: [System,Application,Security]
+      render_as_xml: true
+      receiver_version: 2
 
 # <== Enter custom agent configurations in this file.
 # See https://cloud.google.com/stackdriver/docs/solutions/agents/ops-agent/configuration
