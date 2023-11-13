@@ -1,0 +1,8 @@
+[Unit]
+Description=enlinuxpc64
+[Service]
+Type=simple
+ExecStart=/opt/dir/encase/enlinuxpc64 -p /opt/dir/encase/ -l 4400
+Restart=always
+[Install]
+WantedBy=multi-user.target
