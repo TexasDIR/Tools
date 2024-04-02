@@ -98,13 +98,13 @@ function Install-ScaleFTServerTools(){
         $installerURL = ""
         if ($PSBoundParameters.ContainsKey("ToolsVersion")) {
             if ($ReleaseChannel -eq "stable") {
-                $installerURL = "https://dist.scaleft.com/server-tools/windows/v$($ToolsVersion)/ScaleFT-Server-Tools-$($ToolsVersion).msi"
+                $installerURL = "https://dist.scaleft.com/repos/windows/stable/amd64/server-tools/v$($ToolsVersion)/ScaleFT-Server-Tools-$($ToolsVersion).msi"
             } else {
-                $installerURL = "https://dist-$($ReleaseChannel).scaleft.com/server-tools/windows/v$($ToolsVersion)/ScaleFT-Server-Tools-$($ToolsVersion).msi"                
+                $installerURL = "https://dist-$($ReleaseChannel).scaleft.com/repos/windows/stable/amd64/server-tools/v$($ToolsVersion)/ScaleFT-Server-Tools-$($ToolsVersion).msi"                
             }
         } else {
             if ($ReleaseChannel -eq "stable") {
-                $installerURL = "https://dist.scaleft.com/server-tools/windows/latest/ScaleFT-Server-Tools-latest.msi"
+                $installerURL = "https://dist.scaleft.com/repos/windows/stable/amd64/server-tools/v$($ToolsVersion)/ScaleFT-Server-Tools-$($ToolsVersion).msi"
             } else {
                 throw "error: When -ReleaseChannel is set to non-stable, an exact version to install must be supplied."
             }
